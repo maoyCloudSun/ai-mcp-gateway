@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ai-mcp-gateway-test-server-demo
+  main:
+    banner-mode: off
+  ai:
+    mcp:
+      server:
+        name: ${spring.application.name}
+        version: 1.0.0
+        type: async
+        instructions: "This is a test"
+        sse-endpoint: /sse
+        sse-message-endpoint: /mcp/message
+        capabilities:
+          tool: true
+          resource: true
+          prompt: true
+          completion: true
+logging:
+  file:
+    name: log/${spring.application.name}.log
