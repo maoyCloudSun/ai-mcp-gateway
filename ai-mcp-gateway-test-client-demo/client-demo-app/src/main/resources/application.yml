@@ -4,4 +4,4 @@ spring:
   profiles:
     active: dev
   application:
-    name: "ai-mcp-client-demo"
+    name: "ai-mcp-client-test-demo"
