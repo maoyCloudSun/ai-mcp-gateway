@@ -28,11 +28,17 @@ public class ApiTest {
 
     @Test
     public void test() {
+        /**
+         * 1.设置模型
+         * 2.设置
+         */
         ChatClient chat = chatBuilder.defaultOptions(OpenAiChatOptions.builder()
                 .model("GLM-5.3")
                 .toolCallbacks(
-                        new SyncMcpToolCallbackProvider(sseMcpClient()
-                        ).getToolCallbacks()).build()
+                        new SyncMcpToolCallbackProvider(
+                                sseMcpClient()
+                        ).getToolCallbacks()
+                ).build()
         ).build();
         log.info("测试结果： {}", chat.prompt("有哪些工具可以使用").call().content());
     }
@@ -43,6 +49,7 @@ public class ApiTest {
                 .builder("http://127.0.0.1:8080/sse")
                 .build();
 
+        // 这边是通过mcp的协议进行连接
         McpSyncClient mcpSyncClient = McpClient.sync(sseClientTransport).requestTimeout(Duration.ofMinutes(3000)).build();
         McpSchema.InitializeResult sse = mcpSyncClient.initialize();
         log.info("sse mcp init: {}", sse);

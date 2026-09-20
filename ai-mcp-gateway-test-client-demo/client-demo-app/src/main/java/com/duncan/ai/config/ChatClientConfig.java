@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.ai.chat.client.ChatClient;
 @Configuration
 public class ChatClientConfig {
-
+    // ChatClient.Builder
     @Bean
     public ChatClient.Builder chatClientBuilder(OpenAiChatModel chatModel) {
         return new DefaultChatClientBuilder(chatModel, ObservationRegistry.NOOP, (ChatClientObservationConvention) null,null);

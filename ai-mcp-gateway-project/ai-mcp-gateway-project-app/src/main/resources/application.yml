@@ -1,10 +1,12 @@
 server:
-  port: 8081
+  port: 8080
+
+
 spring:
   ai:
     openai:
       base-url: http://127.0.0.1:8081/
-      api-key: e88faedec64f498585f799553edcd9ad.FHHyGMJjXDBVoAod
+      api-key: XXX
       chat:
         options:
           model: GLM-5.3
@@ -14,10 +16,4 @@ spring:
             num-batch: 1536
     agent:
       base-url: https://open.bigmodel.cn/api/coding/paas/v4/
-      api-key: e88faedec64f498585f799553edcd9ad.FHHyGMJjXDBVoAod
-
-
-logging:
-  level:
-    root: info
-
+      api-key: XXX
