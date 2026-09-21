@@ -8,14 +8,14 @@ spring:
   ai:
     openai:
       base-url: http://127.0.0.1:8081/
-      api-key: e88faedec64f498585f799553edcd9ad.FHHyGMJjXDBVoAod
+      api-key: XXXX
       chat:
         options:
           model: GLM-5.3
         embedding-model: text-embedding-ada-002
         embedding:
           options:
-            num-batch: e88faedec64f498585f799553edcd9ad.FHHyGMJjXDBVoAod
+            num-batch: XXXX
     agent:
       base-url: https://open.bigmodel.cn/api/coding/paas/v4/
-      api-key: e88faedec64f498585f799553edcd9ad.FHHyGMJjXDBVoAod
+      api-key: XXXX
