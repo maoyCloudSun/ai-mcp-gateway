@@ -31,7 +31,7 @@ public class SessionManagementService implements ISessionManagementService {
         String sessionId = UUID.randomUUID().toString();
         Sinks.Many<ServerSentEvent<String>> sink = Sinks.many().multicast().onBackpressureBuffer();
 
-        String messageEndpoint = "/" + gatewayId + "/mcp/message?sessionId" + sessionId;
+        String messageEndpoint = "/" + gatewayId + "/mcp/message?sessionId=" + sessionId;
         sink.tryEmitNext(ServerSentEvent.<String>builder()
                         .event("endpoint")
                         .data(messageEndpoint)

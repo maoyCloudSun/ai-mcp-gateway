@@ -18,9 +18,18 @@
             <groupId>com.duncan.ai</groupId>
             <artifactId>ai-mcp-gateway-project-api</artifactId>
         </dependency>
+
+
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.duncan.ai</groupId>
+            <artifactId>ai-mcp-gateway-project-case</artifactId>
         </dependency>
 
     </dependencies>

@@ -102,12 +102,33 @@
         <version>3.7.3</version>
       </dependency>
 
-
+      <!-- 自身模块 -->
       <dependency>
         <groupId>com.duncan.ai</groupId>
         <artifactId>ai-mcp-gateway-project-domain</artifactId>
         <version>${duncan-module-ai}</version>
       </dependency>
+
+      <dependency>
+        <groupId>com.duncan.ai</groupId>
+        <artifactId>ai-mcp-gateway-project-case</artifactId>
+        <version>${duncan-module-ai}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.duncan.ai</groupId>
+        <artifactId>ai-mcp-gateway-project-trigger</artifactId>
+        <version>${duncan-module-ai}</version>
+      </dependency>
+
+      <!-- 这个源码回头看看   -->
+      <dependency>
+        <groupId>cn.bugstack.wrench</groupId>
+        <artifactId>xfg-wrench-starter-design-framework</artifactId>
+        <version>3.0.0</version>
+      </dependency>
+
+
     </dependencies>
   </dependencyManagement>
   <modules>
@@ -117,5 +138,6 @@
     <module>ai-mcp-gateway-project-domain</module>
     <module>ai-mcp-gateway-project-infratructure</module>
     <module>ai-mcp-gateway-project-types</module>
+    <module>ai-mcp-gateway-project-case</module>
   </modules>
 </project>
