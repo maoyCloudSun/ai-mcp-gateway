@@ -21,10 +21,19 @@ public class DefaultMcpSessionFactory {
     private RootNode rootNode;
 
 
+    // 这个是责任链里面的策略handler,就是有了这个handler可以进行责任链的传递
+
+    /**
+     * 1.入参
+     * 2.上下文
+     * 3.返回值
+     * @return
+     */
     public StrategyHandler<String, DefaultMcpSessionFactory.DynamicContext, Flux<ServerSentEvent<String>>> strategyHandler() {
         return rootNode;
     }
 
+    // 这个上下文是干啥的
     @Data
     @Builder
     @AllArgsConstructor

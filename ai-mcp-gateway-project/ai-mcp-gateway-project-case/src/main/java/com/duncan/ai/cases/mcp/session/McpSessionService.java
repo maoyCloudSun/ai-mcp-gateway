@@ -16,6 +16,7 @@ public class McpSessionService implements IMcpSessionService {
 
     @Override
     public Flux<ServerSentEvent<String>> createMcpSession(String gatewayId) throws Exception {
+        // 这个是返回一个root节点
         StrategyHandler<String, DefaultMcpSessionFactory.DynamicContext, Flux<ServerSentEvent<String>>> strategyHandler = defaultMcpSessionFactory.strategyHandler();
 
         return strategyHandler.apply(gatewayId, new DefaultMcpSessionFactory.DynamicContext());
